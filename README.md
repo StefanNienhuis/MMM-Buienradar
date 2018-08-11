@@ -36,3 +36,9 @@ var config = {
 | `lat`            | *Required* The latitude of the location
 | `lon`            | *Required* The longitude of the location
 | `zoom`           | *Optional* The zoom level of the map (1 - 4)<br>*Default*: 1
+
+## Screenshot
+
+This is a screenshot with zoom level 3
+
+![Screenshot on zoom level 2](https://github.com/StefanNienhuis/MMM-Buienradar/raw/master/Screenshot.png)
