@@ -2,7 +2,7 @@
 
 This is a module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/).
 
-This module will show a map with weather the forecast provided by [Buienradar](https://www.buienradar.nl).
+This module will show a map with the weather forecast provided by [Buienradar](https://www.buienradar.nl).
 
 **Note:** Since this module uses [Buienradar](https://www.buienradar.nl), this module will only work for locations in the Netherlands & Belgium
 
