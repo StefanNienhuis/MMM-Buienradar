@@ -22,7 +22,8 @@ var config = {
             config: {
               lat: 52.1015474,
               lon: 5.1758052,
-              zoom: 1
+              zoom: 1,
+              forecast: 1,
             }
         }
     ]
@@ -36,6 +37,8 @@ var config = {
 | `lat`            | *Required* The latitude of the location
 | `lon`            | *Required* The longitude of the location
 | `zoom`           | *Optional* The zoom level of the map (1 - 4)<br>*Default*: 1
+| `forecast`       | *Optional* Last hour overview (0), or three hour forecast (1)<br/>*Default*: 0
+| `update`         | *Optional* update freqency in minutes, minimal 5 minutes<br/>*Default*: 30
 
 ## Screenshot
 
