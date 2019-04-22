@@ -1,8 +1,8 @@
 {
   "name": "MMM-Buienradar",
-  "version": "1.0.0",
-  "description": "Todo: Insert description here!",
+  "version": "1.0.1",
+  "description": "This module will show a map with the weather data provided by Buienradar.",
   "main": "MMM-Buienradar.js",
-  "author": "stefannienhuis",
+  "author": "Stefan Nienhuis",
   "license": "ISC"
 }

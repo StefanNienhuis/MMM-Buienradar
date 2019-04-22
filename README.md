@@ -1,10 +1,10 @@
 # MMM-Buienradar
 
-This is a module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/).
+This is a module for [MagicMirror²](https://github.com/MichMich/MagicMirror/).
 
-This module will show a map with the weather forecast provided by [Buienradar](https://www.buienradar.nl).
+This module will show a map with the weather data provided by [Buienradar](https://www.buienradar.nl).
 
-**Note:** Since this module uses [Buienradar](https://www.buienradar.nl), this module will only work for locations in the Netherlands & Belgium
+**Note:** Since this module uses [Buienradar](https://www.buienradar.nl), it'll only work for locations in the Netherlands & Belgium
 
 ## Installation
 1. Navigate to your MagicMirror's modules folder, and run the following command: `git clone https://github.com/StefanNienhuis/MMM-Buienradar.git`
@@ -22,7 +22,9 @@ var config = {
             config: {
               lat: 52.1015474,
               lon: 5.1758052,
-              zoom: 1
+              forecast: true,
+              zoom: 1,
+              interval: 10
             }
         }
     ]
@@ -35,10 +37,13 @@ var config = {
 |----------------- |-----------
 | `lat`            | *Required* The latitude of the location
 | `lon`            | *Required* The longitude of the location
-| `zoom`           | *Optional* The zoom level of the map (1 - 4)<br>*Default*: 1
+| `forecast`       | *Optional* Three hour forecast (true) or last hour overview (false)<br>*Default:* true
+| `zoom`           | *Optional* The zoom level of the map (1 - 4)<br>*Default:* 1
+| `interval`       | *Optional* The update interval of the map in minutes<br>*Default:* 10
 
 ## Screenshot
 
 This is a screenshot with zoom level 3
 
-![Screenshot on zoom level 2](https://github.com/StefanNienhuis/MMM-Buienradar/raw/master/Screenshot.png)
+![Screenshot on zoom level 3](https://github.com/StefanNienhuis/MMM-Buienradar/raw/master/Screenshot.png)
+

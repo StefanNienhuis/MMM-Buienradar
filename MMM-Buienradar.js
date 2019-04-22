@@ -7,14 +7,20 @@
 
 Module.register("MMM-Buienradar", {
 	defaults: {
-    lat: 52.1015474, // latitude
-    lon: 5.1758052, // longitude
-    zoom: 1 // 4: city, 3: region, 2: province, 1: country
-  },
+    lat: 52.1015474, // Latitude (De Bilt)
+		lon: 5.1758052, // Longitude (De Bilt)
+		forecast: true, // Three hour forecast (true) or last hour overview (false)
+    zoom: 1, // Map zoom level
+    interval: 10 // Update interval (in minutes) 
+	},
+	
+	start: function() {
+		var self = this;
 
-	getScripts: function() {
-    return ['https://www.amcharts.com/lib/3/amcharts.js', 'https://www.amcharts.com/lib/3/serial.js', 'https://www.amcharts.com/lib/3/themes/light.js']
-  },
+		setInterval(() => {
+			self.updateDom();
+		}, this.config.interval * 60000);
+	},
 
   getStyles: function() {
     return ['MMM-Buienradar.css']
@@ -25,8 +31,6 @@ Module.register("MMM-Buienradar", {
     mapContainer.className = 'mapContainer';
 
 		var zoom;
-
-		console.error(this.config.zoom);
 
 		switch (this.config.zoom) {
 			case 4:
@@ -48,7 +52,7 @@ Module.register("MMM-Buienradar", {
 
 		var frame = document.createElement('iframe');
 		frame.className = 'map';
-		frame.src = 'https://gadgets.buienradar.nl/gadget/zoommap/?lat=' + this.config.lat + '&lng=' + this.config.lon + '&overname=2&zoom=' + zoom + '&size=2b&voor=0';
+		frame.src = 'https://gadgets.buienradar.nl/gadget/zoommap/?lat=' + this.config.lat + '&lng=' + this.config.lon + '&overname=2&zoom=' + zoom + '&size=2b&voor=' + (this.config.forecast ? '1' : '0');
 		mapContainer.appendChild(frame);
 
     return mapContainer;
