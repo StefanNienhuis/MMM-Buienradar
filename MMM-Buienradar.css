@@ -8,15 +8,15 @@
  */
 
  .mapContainer {
-   height: 310px;
-   width: 310px;
+/*   height: 310px;
+   width: 310px; */
  }
 
 .map {
    margin-left: -10px;
-   margin-top: -10px;
-   height: 330px;
-   width: 330px;
+   margin-top: -11px;
+/*   height: 330px;
+   width: 330px; */
    overflow: hidden;
    border: none;
    -webkit-transform: scale(calc(310 / 330));
