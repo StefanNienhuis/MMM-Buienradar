@@ -19,5 +19,5 @@
    width: 330px; */
    overflow: hidden;
    border: none;
-   -webkit-transform: scale(calc(310 / 330));
+/*   -webkit-transform: scale(calc(310 / 330)); */
  }
