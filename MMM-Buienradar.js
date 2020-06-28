@@ -11,7 +11,8 @@ Module.register("MMM-Buienradar", {
 		lon: 5.1758052, // Longitude (De Bilt)
 		forecast: true, // Three hour forecast (true) or last hour overview (false)
     zoom: 1, // Map zoom level
-    interval: 10 // Update interval (in minutes) 
+    interval: 10, // Update interval (in minutes)
+	grayscale: 0, // To use a grayscale filter, set this value between 90 to 100 for optimal results, and a lower value also produces a less bright color image.
 	},
 	
 	start: function() {
@@ -51,6 +52,7 @@ Module.register("MMM-Buienradar", {
 		}
 
 		var frame = document.createElement('iframe');
+		if (this.config.grayscale > 0) frame.style.filter = "grayscale(" + this.config.grayscale + "%)";
 		frame.className = 'map';
 		frame.src = 'https://gadgets.buienradar.nl/gadget/zoommap/?lat=' + this.config.lat + '&lng=' + this.config.lon + '&overname=2&zoom=' + zoom + '&size=2b&voor=' + (this.config.forecast ? '1' : '0');
 		mapContainer.appendChild(frame);
