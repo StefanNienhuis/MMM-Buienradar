@@ -24,7 +24,9 @@ var config = {
               lon: 5.1758052,
               forecast: true,
               zoom: 1,
-              interval: 10
+              interval: 10,
+			  grayscale: 0,
+			  displaysize: "mediumlarge"
             }
         }
     ]
@@ -38,8 +40,10 @@ var config = {
 | `lat`            | *Required* The latitude of the location
 | `lon`            | *Required* The longitude of the location
 | `forecast`       | *Optional* Three hour forecast (true) or last hour overview (false)<br>*Default:* true
-| `zoom`           | *Optional* The zoom level of the map (1 - 4)<br>*Default:* 1
+| `zoom`           | *Optional* The zoom level of the map.<br>*Possible values:* 1-4<br>*Default:* 1
 | `interval`       | *Optional* The update interval of the map in minutes<br>*Default:* 10
+| `grayscale`      | *Optional* Set a grayscale filter.<br>*Possible values:* 0-100, grayscale is best at 90-100, use a lower value for a less bright color image.<br>*Default:* 0 (=off)
+| `displaysize`    | *Optional* The displaysize of the frame.<br>*Possible values:* `"small"`, `"mediumsmall"`, `"mediumlarge"`, `"large"`<br>*Default:* `"mediumlarge"`
 
 ## Screenshot
 
