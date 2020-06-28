@@ -25,8 +25,8 @@ var config = {
               forecast: true,
               zoom: 1,
               interval: 10,
-		      grayscale: 0,
-		      displaysize: "mediumlarge"
+              grayscale: 0,
+              displaysize: "mediumlarge"
             }
         }
     ]
