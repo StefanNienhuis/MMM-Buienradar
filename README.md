@@ -38,14 +38,14 @@ var config = {
 
 | Option           | Description
 |----------------- |-----------
-| `lat`            | *Required* The latitude of the location
-| `lon`            | *Required* The longitude of the location
-| `forecast`       | *Optional* Three hour forecast (true) or last hour overview (false)<br>*Default:* true
-| `zoom`           | *Optional* The zoom level of the map.<br>*Possible values:* 1-4<br>*Default:* 1
-| `interval`       | *Optional* The update interval of the map in minutes<br>*Default:* 10
-| `grayscale`      | *Optional* Set a grayscale filter.<br>*Possible values:* 0-100, grayscale is best at 90-100, use a lower value for a less bright color image.<br>*Default:* 0 (=off)
-| `displaysize`    | *Optional* The displaysize of the frame.<br>*Possible values:* `"small"`, `"mediumsmall"`, `"mediumlarge"`, `"large"`<br>*Default:* `"mediumlarge"`
-| `indicator`      | *Optional* Show yellow indicator over the map (lat/lon), white indicator with grayscale >= 80.<br>Note: The placement on the map is more accurate on a higher zoom level.<br>*Possible values:* `true"`, `false"`<br>*Default:* `false`
+| `lat`            | **Required** The latitude of the location
+| `lon`            | **Required** The longitude of the location
+| `forecast`       | *Optional* Three hour forecast (true) or last hour overview (false)<br>**Default:** true
+| `zoom`           | *Optional* The zoom level of the map.<br>*Possible values:* 1-4<br>**Default:** 1
+| `interval`       | *Optional* The update interval of the map in minutes<br>**Default:** 10
+| `grayscale`      | *Optional* Set a grayscale filter.<br>*Possible values:* 0-100, grayscale is best at 90-100, use a lower value for a less bright color image.<br>**Default:** 0 (=off)
+| `displaysize`    | *Optional* The displaysize of the frame.<br>*Possible values:* `"small"`, `"mediumsmall"`, `"mediumlarge"`, `"large"`<br>**Default:** `"mediumlarge"`
+| `indicator`      | *Optional* Show yellow indicator over the map (lat/lon), white indicator with grayscale >= 80.<br>Note: The placement on the map is more accurate on a higher zoom level.<br>*Possible values:* `true"`, `false"`<br>**Default:** `false`
 
 ## Screenshot
 
