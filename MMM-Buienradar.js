@@ -7,13 +7,14 @@
 
 Module.register("MMM-Buienradar", {
 	defaults: {
-		lat: 52.1015474, // Latitude (De Bilt)
-		lon: 5.1758052, // Longitude (De Bilt)
-		forecast: true, // Three hour forecast (true) or last hour overview (false)
-		zoom: 1, // Map zoom level
-		interval: 10, // Update interval (in minutes)
-		grayscale: 0, // To use a grayscale filter, set this value between 90 to 100 for optimal results, and a lower value also produces a less bright color image.
-		displaysize: "mediumlarge" // Can be "small", "mediumsmall" "mediumlarge", "large"
+		lat: 52.1015474,			// Latitude (De Bilt)
+		lon: 5.1758052,				// Longitude (De Bilt)
+		forecast: true,				// Three hour forecast (true) or last hour overview (false)
+		zoom: 1,					// Map zoom level
+		interval: 10,				// Update interval (in minutes)
+		grayscale: 0,				// To use a grayscale filter, set this value between 90 to 100 for optimal results, and a lower value also produces a less bright color image.
+		indicator: false,			// Show yellow indicator over the map (lat/lon), white indicator with grayscale >= 80. Note: The placement on the map is more accurate on a higher zoom level.
+		displaysize: "mediumlarge"	// Can be "small", "mediumsmall" "mediumlarge", "large"
 	},
 	
 	start: function() {
@@ -25,12 +26,15 @@ Module.register("MMM-Buienradar", {
 	},
 
 	getStyles: function() {
-		return ['MMM-Buienradar.css']
+		return ['MMM-Buienradar.css',  'font-awesome.css']
 	},
 
 	getDom: function() {
 		var mapContainer = document.createElement('div');
-		mapContainer.className = 'mapContainer';
+
+		 // Trigger CSS
+		(this.config.indicator) ? (this.config.grayscale >= 80) ? mapContainer.className = 'mapGrayContainer' : mapContainer.className = 'mapContainer' : mapContainer.className = 'mapNoContainer';
+
 		var zoom;
 		var size;
 
