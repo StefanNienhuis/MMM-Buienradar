@@ -7,17 +7,18 @@
  *
  */
 
- .mapContainer {
-   height: 310px;
-   width: 310px;
- }
+.mapContainer {
+    height: 310px;
+    width: 310px;
+}
 
 .map {
-   margin-left: -10px;
-   margin-top: -10px; /*-25*/
-   height: 330px;
-   width: 330px;
-   overflow: hidden;
-   border: none;
-   -webkit-transform: scale(calc(310 / 330));
- }
+    margin-left: -10px;
+    margin-top: -10px;
+    height: 330px;
+    width: 330px;
+    overflow: hidden;
+    border: none;
+    transform: scale(calc(310 / 330));
+    -webkit-transform: scale(calc(310 / 330));
+}

@@ -1,0 +1,13 @@
+/*
+ *
+ * MMM-Buienradar
+ *
+ * stefannienhuis
+ * ISC Licensed.
+ *
+ */
+
+.map {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}

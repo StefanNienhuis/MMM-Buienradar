@@ -20,11 +20,12 @@ var config = {
             module: 'MMM-Buienradar',
             position: 'top_left',
             config: {
-              lat: 52.1015474,
-              lon: 5.1758052,
-              forecast: true,
-              zoom: 1,
-              interval: 10
+                lat: 52.1015474,
+                lon: 5.1758052,
+                forecast: true,
+                zoom: 1,
+                interval: 10,
+                monochrome: false
             }
         }
     ]
@@ -40,6 +41,7 @@ var config = {
 | `forecast`       | *Optional* Three hour forecast (true) or last hour overview (false)<br>*Default:* true
 | `zoom`           | *Optional* The zoom level of the map (1 - 4)<br>*Default:* 1
 | `interval`       | *Optional* The update interval of the map in minutes<br>*Default:* 10
+| `monochrome`     | *Optional* Whether the map image is displayed as monochrome <br>*Default:* false
 
 ## Screenshot
 
